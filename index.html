@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vsqre Innovations – Client Brochure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #b3e5fc, #e1f5fe, #fff9c4, #fce4ec);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .brochure {
+            width: 960px;
+            background: #ffffff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease;
+        }
+
+        .brochure:hover {
+            transform: rotateY(2deg) rotateX(1deg);
+        }
+
+        .panel {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px 30px;
+            border-right: 1px solid #eee;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            background: #fafafa;
+        }
+
+        .panel:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel:last-child {
+            border-right: none;
+        }
+
+     
+
+        .logo {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3),
+                inset 0 0 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+            animation: float 3s ease-in-out infinite;
+            background: linear-gradient(145deg, #333, #444);
+            object-fit: cover;
+        }
+
+        /* 3D floating animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotateY(0deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotateY(10deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotateY(0deg);
+            }
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotateY(20deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4),
+                inset 0 0 25px rgba(255, 255, 255, 0.3);
+        }
+
+
+        h1 {
+            font-size: 26px;
+            color: #006494;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #00bcd4;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: #006064;
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #444;
+        }
+
+        li {
+            margin-bottom: 16px;
+        }
+
+
+        .pricing span {
+            display: block;
+            margin-top: 16px;
+            margin-left: 10px;
+            color: #333;
+            font-size: 14px;
+        }
+
+
+        a {
+            color: #0288d1;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        i {
+            margin-right: 8px;
+            color: #0288d1;
+        }
+
+        @media (max-width: 768px) {
+            .brochure {
+                flex-direction: column;
+            }
+
+            .panel {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+
+            .panel:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="brochure">
+        <div class="panel">
+            <div class="logo-container">
+                <img src="img/Vsqre.logo-removebg-preview.png" alt="Vsqre Logo" class="logo">
+            </div>
+            <h1>Innovate. Design. Deliver.</h1>
+            <p><i class="fas fa-briefcase"></i> Your One-Stop Freelancing Studio</p>
+
+            <p><i class="fas fa-map-marker-alt"></i> Based in <span class="highlight">Bhavani</span> | Serving Clients
+                Everywhere</p>
+
+            <p>We turn your ideas into engaging, creative, and functional digital experiences. Whether you're a startup,
+                student, or business, we tailor each project to match your vision.</p>
+        </div>
+
+        <div class="panel">
+            <h2><i class="fas fa-cogs"></i> Services & Pricing</h2>
+
+            <ul>
+                <li><i class="fas fa-code"></i> <strong>Web Development</strong></li>
+                <div class="pricing">
+                    <span>Static Website – ₹2,500+</span>
+                    <span>Landing Page – ₹3,000+</span>
+                    <span>Responsive Portfolio – ₹3,000+</span>
+                    <span>Custom Web App – ₹4,999+</span>
+                </div>
+                </li>
+                <li><i class="fas fa-paint-brush"></i> <strong>Graphic Design & Posters</strong></li>
+                <div class="pricing">
+                    <span>Social Media Graphics – ₹649+</span>
+                    <span>Event Posters – ₹699+</span>
+                    <span>Logo Designs – ₹899+</span>
+                </div>
+                </li>
+                <li><i class="fas fa-shopping-cart"></i> <strong>E-Commerce Services</strong></li>
+                <div class="pricing">
+                    <span>Product Listings – ₹1,000+</span>
+                    <span>UI/UX Tweaks – ₹1,999+</span>
+                    <span>Product Image Editing – ₹499+</span>
+                </div>
+                </li>
+                <li><i class="fas fa-file-alt"></i> <strong>Resume Services</strong></li>
+                <div class="pricing">
+                    <span>ATS-Friendly Resume – ₹299+</span>
+                    <span>Cover Letter – ₹349+</span>
+                    <span>Portfolio Resume Web Page – ₹1,999+</span>
+                </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel">
+            <h2><i class="fas fa-star"></i> Why Vsqre?</h2>
+
+            <ul>
+                <li>Tailored Digital Solutions</li>
+                <li>Fast & Reliable Delivery</li>
+                <li>Student & Startup Friendly</li>
+                <li>Affordable & Transparent Pricing</li>
+            </ul>
+            <h2><i class="fas fa-address-book"></i> Contact</h2>
+
+            <p><i class="fas fa-envelope"></i> Email: <a
+                    href="mailto:vsqreinnovations@gmail.com">vsqreinnovations@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> Phone: +91 93422 45687 / +91 93421 63994</p>
+            <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/916380034022" target="_blank">+91 63800
+                    34022</a></p>
+            <p><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/vsqre.innovations"
+                    target="_blank">@vsqre_innovations</a></p>
+            <p><i class="fas fa-globe"></i> Website: <a href="https://website-qrlk-vsqre-innovations.vercel.app/"
+                    target="_blank">vsqre-innovations.vercel.app</a></p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
